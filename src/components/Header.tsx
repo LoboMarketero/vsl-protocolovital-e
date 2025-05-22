@@ -32,7 +32,7 @@ const Header: React.FC = () => {
           <div className="w-full max-w-xl">
             <CTAButton 
               text="ACESSAR MEU PROTOCOLO 4F AGORA" 
-              className="w-full md:w-auto text-center uppercase"
+              className="w-full md:w-auto text-center uppercase hidden-content"
             />
           </div>
         </div>
