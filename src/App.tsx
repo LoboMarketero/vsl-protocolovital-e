@@ -13,6 +13,10 @@ function App() {
     // Set timer for 5 minutes (300000 milliseconds)
     const timer = setTimeout(() => {
       setShowContent(true);
+      // Add show class to all hidden-content elements
+      document.querySelectorAll('.hidden-content').forEach(el => {
+        el.classList.add('show');
+      });
     }, 300000);
 
     const observer = new IntersectionObserver(

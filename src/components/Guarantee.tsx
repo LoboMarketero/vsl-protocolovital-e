@@ -15,7 +15,7 @@ const Guarantee: React.FC = () => {
         <div className="text-center">
           <CTAButton 
             text="ACESSAR MEU PROTOCOLO 4F AGORA" 
-            className="w-full md:w-auto text-center uppercase"
+            className="w-full md:w-auto text-center uppercase hidden-content"
           />
         </div>
       </div>

@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="flex flex-col items-center gap-8">
           <div className="w-full max-w-xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-jade-600 text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-jade-600 text-center mb-6 hidden-content">
               Comece sua transformação hoje
             </h2>
             <CTAButton 
               text="ACESSAR MEU PROTOCOLO 4F AGORA" 
-              className="w-full md:w-auto text-center uppercase"
+              className="w-full md:w-auto text-center uppercase hidden-content"
             />
           </div>
           
