@@ -15,3 +15,5 @@ const Guarantee: React.FC = () => {
     </section>
   );
 };
+
+export default Guarantee
