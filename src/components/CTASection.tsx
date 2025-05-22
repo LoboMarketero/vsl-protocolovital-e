@@ -11,10 +11,6 @@ const CTASection: React.FC = () => {
           </h2>
           <div className="space-y-4">
             <CTAButton 
-              text="ACESSAR MEU PROTOCOLO 4F AGORA" 
-              className="w-full md:w-auto text-center uppercase hidden-content"
-            />
-            <CTAButton 
               text="QUERO COMEÇAR AGORA" 
               className="w-full md:w-auto text-center uppercase hidden-content"
             />

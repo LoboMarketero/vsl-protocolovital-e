@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section className="section-spacing" id="testimonials">
+    <section className="section-spacing bg-white/30" id="testimonials">
       <div className="container-custom">
         <h2 className="section-title animate-on-scroll">O que dizem as pessoas que já fizeram</h2>
         

@@ -1,8 +1,9 @@
 import React from 'react';
+import CTAButton from './CTAButton';
 
 const Guarantee: React.FC = () => {
   return (
-    <section className="section-spacing" id="guarantee">
+    <section className="section-spacing bg-white/30" id="guarantee">
       <div className="container-custom">
         <div className="max-w-lg mx-auto mb-4">
           <img 
@@ -11,9 +12,15 @@ const Guarantee: React.FC = () => {
             className="w-full h-auto"
           />
         </div>
+        <div className="max-w-xl mx-auto">
+          <CTAButton 
+            text="ACESSAR MEU PROTOCOLO 4F AGORA" 
+            className="w-full md:w-auto text-center uppercase hidden-content"
+          />
+        </div>
       </div>
     </section>
   );
 };
 
-export default Guarantee
+export default Guarantee;

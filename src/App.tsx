@@ -6,15 +6,14 @@ import Guarantee from './components/Guarantee';
 import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
+import CTAButton from './components/CTAButton';
 
 function App() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    // Set timer for 20 seconds (20000 milliseconds)
     const timer = setTimeout(() => {
       setShowContent(true);
-      // Add show class to all hidden-content elements
       document.querySelectorAll('.hidden-content').forEach(el => {
         el.classList.add('show');
       });
@@ -43,11 +42,39 @@ function App() {
   return (
     <div className="relative">
       <Header />
+      <div className="bg-white/30">
+        <div className="container-custom relative z-10">
+          <div className="flex flex-col items-center">
+            <div className="w-full max-w-md mb-4">
+              <div style={{position: 'relative', paddingTop: '177.77777777777777%'}}>
+                <iframe 
+                  id="panda-3cccc2a2-419f-40a7-a19e-976b4b3b04a2" 
+                  src="https://player-vz-ff1d2603-87c.tv.pandavideo.com.br/embed/?v=3cccc2a2-419f-40a7-a19e-976b4b3b04a2" 
+                  style={{border: 'none', position: 'absolute', top: 0, left: 0}} 
+                  allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
+                  allowFullScreen={true}
+                  width="100%" 
+                  height="100%" 
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div 
         className={`transition-all duration-1000 ease-in-out overflow-hidden ${
           showContent ? 'opacity-100 max-h-[5000px]' : 'opacity-0 max-h-0'
         }`}
       >
+        <div className="container-custom">
+          <div className="w-full max-w-xl mx-auto px-4 mb-8">
+            <CTAButton 
+              text="ACESSAR MEU PROTOCOLO 4F AGORA" 
+              className="w-full md:w-auto text-center uppercase hidden-content"
+            />
+          </div>
+        </div>
         <Benefits />
         <Testimonials />
         <Guarantee />
@@ -59,4 +86,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

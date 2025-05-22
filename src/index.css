@@ -8,8 +8,7 @@
   }
   
   body {
-    @apply font-opensans text-gray-700 bg-gradient-to-b from-white to-mint-100 min-h-screen;
-    background-size: 100% 200%;
+    @apply font-opensans text-gray-700 bg-white/30 min-h-screen;
     background-attachment: fixed;
   }
   
