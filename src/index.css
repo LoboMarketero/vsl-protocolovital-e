@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-opensans text-gray-700 bg-gradient-to-b from-white to-mint-100 min-h-screen;
+    background-size: 100% 200%;
+    background-attachment: fixed;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-3 md:px-6;
+  }
+  
+  .glass-card {
+    @apply bg-white/75 backdrop-blur-sm rounded-xl shadow-glass;
+  }
+  
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-jade-600 mb-3 text-center;
+  }
+  
+  .section-spacing {
+    @apply py-6 md:py-8;
+  }
+  
+  .button-primary {
+    @apply bg-gradient-to-r from-jade-600 to-jade-700 hover:from-jade-700 hover:to-jade-800 text-white font-montserrat font-bold py-3 px-6 rounded-lg shadow-button transition-all duration-300 hover:scale-105 hover:shadow-lg transform active:scale-95;
+  }
+  
+  .button-secondary {
+    @apply bg-gradient-to-r from-coral-400 to-coral-500 hover:from-coral-500 hover:to-coral-600 text-white font-montserrat font-bold py-3 px-6 rounded-lg shadow-button transition-all duration-300 hover:scale-105 hover:shadow-lg transform active:scale-95;
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-700 ease-out transform translate-y-10;
+  }
+  
+  .animate-on-scroll.show {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Animations */
+.hover-bounce:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* FAQ accordion */
+.faq-item.open .faq-content {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.faq-item .faq-content {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  overflow: hidden;
+}
+
+.faq-item .faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Testimonial carousel */
+.testimonial-carousel {
+  overflow-x: hidden;
+}
+
+.testimonial-slide {
+  transition: transform 0.5s ease-out;
+}
