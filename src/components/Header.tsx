@@ -1,4 +1,5 @@
 import React from 'react';
+import CTAButton from './CTAButton';
 
 const Header: React.FC = () => {
   return (
@@ -26,6 +27,13 @@ const Header: React.FC = () => {
                 fetchPriority="high"
               />
             </div>
+          </div>
+
+          <div className="w-full max-w-xl">
+            <CTAButton 
+              text="ACESSAR MEU PROTOCOLO 4F AGORA" 
+              className="w-full md:w-auto text-center uppercase hidden-content"
+            />
           </div>
         </div>
       </div>
