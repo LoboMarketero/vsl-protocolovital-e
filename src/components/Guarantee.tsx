@@ -1,5 +1,4 @@
 import React from 'react';
-import CTAButton from './CTAButton';
 
 const Guarantee: React.FC = () => {
   return (
@@ -12,15 +11,7 @@ const Guarantee: React.FC = () => {
             className="w-full h-auto"
           />
         </div>
-        <div className="text-center">
-          <CTAButton 
-            text="ACESSAR MEU PROTOCOLO 4F AGORA" 
-            className="w-full md:w-auto text-center uppercase hidden-content"
-          />
-        </div>
       </div>
     </section>
   );
 };
-
-export default Guarantee;

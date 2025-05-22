@@ -4,6 +4,7 @@ import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
 import Guarantee from './components/Guarantee';
 import FAQ from './components/FAQ';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 
 function App() {
@@ -51,10 +52,9 @@ function App() {
         <Testimonials />
         <Guarantee />
         <FAQ />
+        <CTASection />
       </div>
       <Footer />
     </div>
   );
 }
-
-export default App;
