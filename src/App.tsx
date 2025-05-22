@@ -11,14 +11,14 @@ function App() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    // Set timer for 5 minutes (300000 milliseconds)
+    // Set timer for 20 seconds (20000 milliseconds)
     const timer = setTimeout(() => {
       setShowContent(true);
       // Add show class to all hidden-content elements
       document.querySelectorAll('.hidden-content').forEach(el => {
         el.classList.add('show');
       });
-    }, 300000);
+    }, 20000);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,4 +59,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
