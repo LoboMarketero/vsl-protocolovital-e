@@ -91,3 +91,8 @@
 .testimonial-slide {
   transition: transform 0.5s ease-out;
 }
+
+/* Content reveal transition */
+.content-reveal {
+  transition: all 1s ease-in-out;
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
@@ -7,7 +7,14 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 function App() {
+  const [showContent, setShowContent] = useState(false);
+
   useEffect(() => {
+    // Set timer for 5 minutes (300000 milliseconds)
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 300000);
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
@@ -23,6 +30,7 @@ function App() {
     animateElements.forEach(el => observer.observe(el));
 
     return () => {
+      clearTimeout(timer);
       animateElements.forEach(el => observer.unobserve(el));
     };
   }, []);
@@ -30,10 +38,16 @@ function App() {
   return (
     <div className="relative">
       <Header />
-      <Benefits />
-      <Testimonials />
-      <Guarantee />
-      <FAQ />
+      <div 
+        className={`transition-all duration-1000 ease-in-out overflow-hidden ${
+          showContent ? 'opacity-100 max-h-[5000px]' : 'opacity-0 max-h-0'
+        }`}
+      >
+        <Benefits />
+        <Testimonials />
+        <Guarantee />
+        <FAQ />
+      </div>
       <Footer />
     </div>
   );
