@@ -71,11 +71,13 @@ const Testimonials: React.FC = () => {
               {testimonialImages.map((image, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="glass-card p-6 md:p-8">
-                    <img 
-                      src={image} 
-                      alt={`Depoimento ${index + 1}`} 
-                      className="w-full h-auto rounded-lg shadow-lg"
-                    />
+                    <div className="transform hover:scale-[1.02] transition-transform duration-300">
+                      <img 
+                        src={image} 
+                        alt={`Depoimento ${index + 1}`} 
+                        className="w-full h-auto shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
+                      />
+                    </div>
                   </div>
                 </div>
               ))}
