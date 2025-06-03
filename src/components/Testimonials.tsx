@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
                     <img 
                       src={image} 
                       alt={`Depoimento ${index + 1}`} 
-                      className="w-full h-auto rounded-xl shadow-[0_20px_50px_rgba(46,125,50,0.7)]"
+                      className="w-full h-auto rounded-xl"
                     />
                   </div>
                 </div>
