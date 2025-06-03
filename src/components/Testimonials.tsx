@@ -59,7 +59,7 @@ const Testimonials: React.FC = () => {
         
         <div className="relative animate-on-scroll">
           <div 
-            className="testimonial-carousel overflow-hidden" 
+            className="testimonial-carousel" 
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
@@ -69,7 +69,7 @@ const Testimonials: React.FC = () => {
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
               {testimonialImages.map((image, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
+                <div key={index} className="w-full flex-shrink-0">
                   <div className="transform hover:scale-[1.02] transition-transform duration-300">
                     <img 
                       src={image} 
