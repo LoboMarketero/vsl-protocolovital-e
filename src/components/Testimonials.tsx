@@ -1,40 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-interface TestimonialProps {
-  image: string;
-  name: string;
-  location: string;
-  age: number;
-  text: string;
-  result: string;
-}
-
-const testimonials: TestimonialProps[] = [
-  {
-    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg",
-    name: "Mariana Oliveira",
-    location: "São Paulo",
-    age: 42,
-    text: "Depois de tentar tantas dietas, o Protocolo 4F foi o único método que realmente funcionou. Meu inchaço sumiu em uma semana!",
-    result: "Perdeu 7kg em 21 dias"
-  },
-  {
-    image: "https://images.pexels.com/photos/774095/pexels-photo-774095.jpeg",
-    name: "Carolina Mendes",
-    location: "Rio de Janeiro",
-    age: 38,
-    text: "Minha energia voltou! Antes eu precisava de café o dia todo e mesmo assim me sentia cansada. Com o protocolo, tudo mudou.",
-    result: "Perdeu 5kg e recuperou disposição"
-  },
-  {
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
-    name: "Juliana Santos",
-    location: "Belo Horizonte",
-    age: 45,
-    text: "A mudança na minha pele foi incrível. As pessoas começaram a perguntar qual produto eu estava usando, mas era só o protocolo!",
-    result: "Reduziu inchaço e melhorou a pele"
-  }
+const testimonialImages = [
+  "https://i.postimg.cc/bN4j5GWT/whats-dep1.png",
+  "https://i.postimg.cc/kg8dPJdd/whats-dep2.png",
+  "https://i.postimg.cc/KYDS40zq/whats-dep3.png",
+  "https://i.postimg.cc/1zQ19k9V/whats-dep4.png",
+  "https://i.postimg.cc/j5qVfyns/whats-dep5.png"
 ];
 
 const Testimonials: React.FC = () => {
@@ -43,11 +15,11 @@ const Testimonials: React.FC = () => {
   const [touchEnd, setTouchEnd] = useState(0);
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    setActiveIndex((prev) => (prev + 1) % testimonialImages.length);
   };
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setActiveIndex((prev) => (prev - 1 + testimonialImages.length) % testimonialImages.length);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -60,12 +32,10 @@ const Testimonials: React.FC = () => {
 
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 100) {
-      // Swiped left
       handleNext();
     }
 
     if (touchStart - touchEnd < -100) {
-      // Swiped right
       handlePrev();
     }
   };
@@ -100,35 +70,14 @@ const Testimonials: React.FC = () => {
               className="testimonial-slide flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
             >
-              {testimonials.map((testimonial, index) => (
+              {testimonialImages.map((image, index) => (
                 <div key={index} className="w-full flex-shrink-0 px-4">
                   <div className="glass-card p-6 md:p-8">
-                    <div className="flex flex-col md:flex-row gap-6">
-                      <div className="md:w-1/3">
-                        <div className="relative">
-                          <div className="absolute -inset-1 bg-gradient-to-br from-jade-400/30 to-coral-400/30 rounded-full blur-md"></div>
-                          <img 
-                            src={testimonial.image} 
-                            alt={testimonial.name} 
-                            className="w-40 h-40 object-cover rounded-full mx-auto relative z-10"
-                          />
-                        </div>
-                        <div className="text-center mt-4">
-                          <p className="font-montserrat font-bold">{testimonial.name}</p>
-                          <p className="text-sm text-gray-600">{testimonial.location}, {testimonial.age} anos</p>
-                        </div>
-                      </div>
-                      
-                      <div className="md:w-2/3">
-                        <div className="text-coral-400 mb-4">
-                          <Quote className="h-8 w-8" />
-                        </div>
-                        <p className="text-lg mb-6 italic">{testimonial.text}</p>
-                        <div className="bg-jade-100 text-jade-700 font-semibold px-4 py-2 rounded-lg inline-block">
-                          {testimonial.result}
-                        </div>
-                      </div>
-                    </div>
+                    <img 
+                      src={image} 
+                      alt={`Depoimento ${index + 1}`} 
+                      className="w-full h-auto rounded-lg shadow-lg"
+                    />
                   </div>
                 </div>
               ))}
@@ -151,7 +100,7 @@ const Testimonials: React.FC = () => {
         </div>
         
         <div className="flex justify-center mt-6">
-          {testimonials.map((_, index) => (
+          {testimonialImages.map((_, index) => (
             <button
               key={index}
               className={`h-3 w-3 rounded-full mx-1 ${

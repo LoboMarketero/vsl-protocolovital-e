@@ -78,8 +78,8 @@ function App() {
         </div>
         <Benefits />
         <Testimonials />
-        <Guarantee />
         <Pricing />
+        <Guarantee />
         <FAQ />
         <CTASection />
       </div>
