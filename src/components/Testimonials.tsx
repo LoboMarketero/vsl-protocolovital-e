@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonialImages = [
-  "https://i.postimg.cc/bN4j5GWT/whats-dep1.png",
-  "https://i.postimg.cc/kg8dPJdd/whats-dep2.png",
   "https://i.postimg.cc/KYDS40zq/whats-dep3.png",
   "https://i.postimg.cc/1zQ19k9V/whats-dep4.png",
   "https://i.postimg.cc/j5qVfyns/whats-dep5.png"
