@@ -7,6 +7,7 @@ import FAQ from './components/FAQ';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import CTAButton from './components/CTAButton';
+import Pricing from './components/Pricing';
 
 function App() {
   const [showContent, setShowContent] = useState(false);
@@ -78,6 +79,7 @@ function App() {
         <Benefits />
         <Testimonials />
         <Guarantee />
+        <Pricing />
         <FAQ />
         <CTASection />
       </div>
@@ -85,5 +87,3 @@ function App() {
     </div>
   );
 }
-
-export default App

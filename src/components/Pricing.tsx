@@ -1,94 +1,109 @@
 import React from 'react';
-import CTAButton from './CTAButton';
-import { CheckCircle, Tablet, FileText, Video, ClipboardList } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 
-interface FeatureProps {
-  icon: React.ReactNode;
+interface PlanFeatureProps {
   text: string;
+  highlighted?: boolean;
 }
 
-const Feature: React.FC<FeatureProps> = ({ icon, text }) => {
-  return (
-    <div className="flex items-center gap-3 mb-4">
-      <div className="text-jade-600 flex-shrink-0">
-        {icon}
-      </div>
-      <p className="text-gray-700">{text}</p>
-    </div>
-  );
-};
+const PlanFeature: React.FC<PlanFeatureProps> = ({ text, highlighted }) => (
+  <div className="flex items-center gap-2 mb-2">
+    <Check className={`h-5 w-5 ${highlighted ? 'text-coral-400' : 'text-jade-600'}`} />
+    <span className={highlighted ? 'font-semibold' : ''}>{text}</span>
+  </div>
+);
 
 const Pricing: React.FC = () => {
-  const features = [
-    {
-      icon: <FileText className="h-5 w-5" />,
-      text: "4 fases com instruções detalhadas"
-    },
-    {
-      icon: <ClipboardList className="h-5 w-5" />,
-      text: "Ingredientes acessíveis (menos de R$150)"
-    },
-    {
-      icon: <Video className="h-5 w-5" />,
-      text: "Vídeos rápidos de apoio para cada etapa"
-    },
-    {
-      icon: <Tablet className="h-5 w-5" />,
-      text: "Guia de sintomas + planner visual"
-    }
-  ];
-
   return (
     <section className="section-spacing bg-white/30" id="pricing">
       <div className="container-custom">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="section-title animate-on-scroll">Tudo isso por apenas R$19,90</h2>
-          
-          <div className="text-center mb-8 animate-on-scroll">
-            <p className="text-lg text-gray-700">
-              Preço único para acesso completo ao protocolo, passo a passo diário e guia visual
-            </p>
+        <h2 className="section-title animate-on-scroll">Escolha seu plano</h2>
+        
+        <div className="text-center mb-4 text-coral-500 font-semibold animate-on-scroll">
+          Apenas 50 protocolos liberados hoje
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* Plano Essencial */}
+          <div className="glass-card p-6 transition-all duration-300 hover:shadow-xl animate-on-scroll">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-jade-600">Plano Essencial</h3>
+              <p className="text-gray-600 mb-4">Para começar sua transformação</p>
+              <div className="text-3xl font-bold text-jade-700">R$ 47,00</div>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              <PlanFeature text="Protocolo completo 21 dias (4 fases)" />
+              <PlanFeature text="6 vídeos educacionais" />
+              <PlanFeature text="Guias visuais passo a passo" />
+              <PlanFeature text="Checklists detalhados" />
+              <PlanFeature text="Lista de compras completa" />
+              <PlanFeature text="Tracker de peso básico" />
+              <PlanFeature text="FAQ e suporte básico" />
+            </div>
+
+            <a 
+              href="https://pay.risepay.com.br/Pay/f76aef2598784706b127b2272a397f6b"
+              className="block w-full text-center button-primary"
+            >
+              COMEÇAR AGORA
+            </a>
           </div>
-          
-          <div className="glass-card p-6 md:p-8 mb-8 animate-on-scroll">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-2/5">
-                <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-br from-jade-400/20 to-coral-400/20 rounded-2xl blur-md"></div>
-                  <img 
-                    src="https://images.pexels.com/photos/5417682/pexels-photo-5417682.jpeg" 
-                    alt="Protocolo 4F" 
-                    className="w-full h-auto rounded-xl relative z-10"
-                  />
-                </div>
-              </div>
-              
-              <div className="md:w-3/5">
-                <h3 className="text-2xl font-bold text-jade-600 mb-4">O que você vai receber:</h3>
-                
-                <div className="space-y-4">
-                  {features.map((feature, index) => (
-                    <Feature key={index} {...feature} />
-                  ))}
-                </div>
-                
-                <div className="mt-8">
-                  <CTAButton 
-                    text="QUERO MEU PROTOCOLO AGORA" 
-                    className="w-full text-center"
-                  />
-                </div>
-              </div>
+
+          {/* Plano Completo */}
+          <div className="glass-card p-6 transform md:-translate-y-4 relative border-2 border-coral-400 transition-all duration-300 hover:shadow-xl animate-on-scroll">
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <span className="bg-coral-400 text-white px-4 py-1 rounded-full text-sm font-bold">
+                MAIS POPULAR
+              </span>
             </div>
-            
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-jade-600 flex-shrink-0 mt-0.5" />
-                <p className="text-gray-700">
-                  <span className="font-bold">Acesso imediato</span>: Você recebe o protocolo completo no seu email em até 5 minutos após a confirmação do pagamento.
-                </p>
-              </div>
+
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-coral-500">Plano Completo</h3>
+              <p className="text-gray-600 mb-2">Resultados garantidos + manutenção</p>
+              <div className="text-3xl font-bold text-coral-500 mb-2">R$ 87,00</div>
+              <div className="text-jade-600 font-semibold">Economize R$ 27,00</div>
             </div>
+
+            <div className="space-y-4 mb-6">
+              <PlanFeature text="TUDO do Plano Essencial +" highlighted />
+              <PlanFeature text="Guia de Manutenção Pós-Protocolo" highlighted />
+              <PlanFeature text="25 Receitas Extras Turbinadas" highlighted />
+              <PlanFeature text="Tracker Avançado com gráficos" highlighted />
+              <PlanFeature text="Notificações Premium" highlighted />
+              <PlanFeature text="Suporte prioritário" highlighted />
+            </div>
+
+            <a 
+              href="https://pay.risepay.com.br/Pay/15fc47ff091c4946ad6f62bd385b3b70"
+              className="block w-full text-center button-secondary text-lg py-4"
+            >
+              ESCOLHER COMPLETO
+            </a>
+          </div>
+
+          {/* Plano Premium */}
+          <div className="glass-card p-6 transition-all duration-300 hover:shadow-xl animate-on-scroll">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-mint-500">Plano Premium</h3>
+              <p className="text-gray-600 mb-4">Máximos resultados + comunidade VIP</p>
+              <div className="text-3xl font-bold text-mint-600">R$ 127,00</div>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              <PlanFeature text="TUDO do Plano Completo +" />
+              <PlanFeature text="Protocolo Turbinado (15 dias)" />
+              <PlanFeature text="Coach Virtual IA" />
+              <PlanFeature text="Analytics Premium" />
+              <PlanFeature text="1 mês GRÁTIS Comunidade VIP (valor R$ 37)" />
+            </div>
+
+            <a 
+              href="https://pay.risepay.com.br/Pay/191b0f226a26494298bf07f79f9d1b54"
+              className="block w-full text-center bg-gradient-to-r from-mint-500 to-mint-600 hover:from-mint-600 hover:to-mint-700 text-white font-montserrat font-bold py-3 px-6 rounded-lg shadow-button transition-all duration-300 hover:scale-105 hover:shadow-lg transform active:scale-95"
+            >
+              QUERO O PREMIUM
+            </a>
           </div>
         </div>
       </div>

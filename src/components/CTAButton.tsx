@@ -16,7 +16,10 @@ const CTAButton: React.FC<CTAButtonProps> = ({
   const baseClassName = isPrimary ? 'button-primary' : 'button-secondary';
   
   const handleClick = () => {
-    window.location.href = 'https://pay.kiwify.com.br/Y4qOQKx';
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth' });
+    }
     onClick?.();
   };
   
