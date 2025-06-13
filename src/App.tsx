@@ -46,8 +46,8 @@ function App() {
       <div className="bg-white/30">
         <div className="container-custom relative z-10">
           <div className="flex flex-col items-center">
-            <div className="w-full max-w-md mb-4">
-              <div style={{position: 'relative', paddingTop: '50%'}}>
+            <div className="w-full max-w-2xl mb-4">
+              <div style={{position: 'relative', paddingTop: '51.25%'}}>
                 <iframe 
                   id="panda-83ef18b0-1d4b-4b84-a0e6-31b56b5f95fb" 
                   src="https://player-vz-ff1d2603-87c.tv.pandavideo.com.br/embed/?v=83ef18b0-1d4b-4b84-a0e6-31b56b5f95fb" 
