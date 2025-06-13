@@ -43,7 +43,7 @@ const Pricing: React.FC = () => {
             </div>
 
             <a 
-              href="https://pay.risepay.com.br/Pay/f76aef2598784706b127b2272a397f6b"
+              href="https://pay.risepay.com.br/Pay/bc822b1f82da46a3b7fc4b6d9483c7ef"
               className="block w-full text-center button-primary"
             >
               COMEÇAR AGORA
@@ -75,7 +75,7 @@ const Pricing: React.FC = () => {
             </div>
 
             <a 
-              href="https://pay.risepay.com.br/Pay/15fc47ff091c4946ad6f62bd385b3b70"
+              href="https://pay.risepay.com.br/Pay/30d9a594bd3b4c7bb9d47d79b0a50b7f"
               className="block w-full text-center button-secondary text-lg py-4"
             >
               ESCOLHER COMPLETO
@@ -99,7 +99,7 @@ const Pricing: React.FC = () => {
             </div>
 
             <a 
-              href="https://pay.risepay.com.br/Pay/191b0f226a26494298bf07f79f9d1b54"
+              href="https://pay.risepay.com.br/Pay/2dd937822f42436ea350637d6f9d358b"
               className="block w-full text-center bg-gradient-to-r from-mint-500 to-mint-600 hover:from-mint-600 hover:to-mint-700 text-white font-montserrat font-bold py-3 px-6 rounded-lg shadow-button transition-all duration-300 hover:scale-105 hover:shadow-lg transform active:scale-95"
             >
               QUERO O PREMIUM

@@ -47,10 +47,10 @@ function App() {
         <div className="container-custom relative z-10">
           <div className="flex flex-col items-center">
             <div className="w-full max-w-md mb-4">
-              <div style={{position: 'relative', paddingTop: '177.77777777777777%'}}>
+              <div style={{position: 'relative', paddingTop: '50%'}}>
                 <iframe 
-                  id="panda-3cccc2a2-419f-40a7-a19e-976b4b3b04a2" 
-                  src="https://player-vz-ff1d2603-87c.tv.pandavideo.com.br/embed/?v=3cccc2a2-419f-40a7-a19e-976b4b3b04a2" 
+                  id="panda-83ef18b0-1d4b-4b84-a0e6-31b56b5f95fb" 
+                  src="https://player-vz-ff1d2603-87c.tv.pandavideo.com.br/embed/?v=83ef18b0-1d4b-4b84-a0e6-31b56b5f95fb" 
                   style={{border: 'none', position: 'absolute', top: 0, left: 0}} 
                   allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
                   allowFullScreen={true}
