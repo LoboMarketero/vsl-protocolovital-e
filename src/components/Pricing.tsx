@@ -29,7 +29,7 @@ const Pricing: React.FC = () => {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-jade-600">Plano Essencial</h3>
               <p className="text-gray-600 mb-4">Para começar sua transformação</p>
-              <div className="text-3xl font-bold text-jade-700">R$ 47,00</div>
+              <div className="text-3xl font-bold text-jade-700">R$ 29,90</div>
             </div>
 
             <div className="space-y-4 mb-6">
@@ -61,8 +61,8 @@ const Pricing: React.FC = () => {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-coral-500">Plano Completo</h3>
               <p className="text-gray-600 mb-2">Resultados garantidos + manutenção</p>
-              <div className="text-3xl font-bold text-coral-500 mb-2">R$ 87,00</div>
-              <div className="text-jade-600 font-semibold">Economize R$ 27,00</div>
+              <div className="text-3xl font-bold text-coral-500 mb-2">R$ 39,90</div>
+              <div className="text-jade-600 font-semibold">Economize R$ 10,00</div>
             </div>
 
             <div className="space-y-4 mb-6">
@@ -87,7 +87,7 @@ const Pricing: React.FC = () => {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-mint-500">Plano Premium</h3>
               <p className="text-gray-600 mb-4">Máximos resultados + comunidade VIP</p>
-              <div className="text-3xl font-bold text-mint-600">R$ 127,00</div>
+              <div className="text-3xl font-bold text-mint-600">R$ 49,90</div>
             </div>
 
             <div className="space-y-4 mb-6">

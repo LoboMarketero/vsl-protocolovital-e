@@ -18,7 +18,7 @@ function App() {
       document.querySelectorAll('.hidden-content').forEach(el => {
         el.classList.add('show');
       });
-    }, 300000);
+    }, 0);
 
     const observer = new IntersectionObserver(
       (entries) => {
