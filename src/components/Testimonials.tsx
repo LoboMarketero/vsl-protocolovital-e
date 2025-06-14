@@ -3,7 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonialImages = [
   "https://i.postimg.cc/KYDS40zq/whats-dep3.png",
-  "https://i.postimg.cc/1zQ19k9V/whats-dep4.png"
+  "https://i.postimg.cc/1zQ19k9V/whats-dep4.png",
+  "https://i.postimg.cc/15ycWL9y/zeoob-com-dl5mk2uyjc-photo.png"
 ];
 
 const Testimonials: React.FC = () => {
