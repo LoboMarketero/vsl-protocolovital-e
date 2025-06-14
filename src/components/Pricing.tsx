@@ -26,7 +26,6 @@ const Pricing: React.FC = () => {
         <div className="max-w-lg mx-auto">
           <div className="glass-card p-6 md:p-8 transition-all duration-300 hover:shadow-xl animate-on-scroll">
             <div className="text-center mb-6">
-              <h3 className="text-3xl font-bold text-jade-600 mb-2">Protocolo Completo 4F</h3>
               <p className="text-gray-600 mb-4">Tudo que você precisa para sua transformação</p>
               <div className="text-4xl font-bold text-jade-700 mb-2">R$ 29,90</div>
               <div className="text-coral-500 font-semibold">Oferta especial por tempo limitado</div>
