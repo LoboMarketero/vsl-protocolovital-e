@@ -17,14 +17,14 @@ const Pricing: React.FC = () => {
   return (
     <section className="section-spacing bg-white/30" id="pricing">
       <div className="container-custom">
-        <h2 className="section-title animate-on-scroll">Seu Protocolo Completo</h2>
+        <h2 className="section-title animate-on-scroll hidden-content">Seu Protocolo Completo</h2>
         
-        <div className="text-center mb-4 text-coral-500 font-semibold animate-on-scroll">
+        <div className="text-center mb-4 text-coral-500 font-semibold animate-on-scroll hidden-content">
           Apenas 50 protocolos liberados hoje
         </div>
 
         <div className="max-w-lg mx-auto">
-          <div className="glass-card p-6 md:p-8 transition-all duration-300 hover:shadow-xl animate-on-scroll">
+          <div className="glass-card p-6 md:p-8 transition-all duration-300 hover:shadow-xl animate-on-scroll hidden-content">
             <div className="text-center mb-6">
               <p className="text-gray-600 mb-4">Tudo que você precisa para sua transformação</p>
               <div className="text-4xl font-bold text-jade-700 mb-2">R$ 29,90</div>

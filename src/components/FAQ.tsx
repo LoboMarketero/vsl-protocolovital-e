@@ -53,9 +53,9 @@ const FAQ: React.FC = () => {
   return (
     <section className="section-spacing bg-white/50" id="faq">
       <div className="container-custom">
-        <h2 className="section-title animate-on-scroll">Perguntas Frequentes</h2>
+        <h2 className="section-title animate-on-scroll hidden-content">Perguntas Frequentes</h2>
         
-        <div className="max-w-3xl mx-auto glass-card p-6 md:p-8 animate-on-scroll">
+        <div className="max-w-3xl mx-auto glass-card p-6 md:p-8 animate-on-scroll hidden-content">
           <div className="space-y-2">
             {faqItems.map((item, index) => (
               <FAQItem key={index} question={item.question} answer={item.answer} />

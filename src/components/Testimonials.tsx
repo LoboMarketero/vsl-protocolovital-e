@@ -49,15 +49,15 @@ const Testimonials: React.FC = () => {
   return (
     <section className="section-spacing bg-white/30" id="testimonials">
       <div className="container-custom">
-        <h2 className="section-title animate-on-scroll">O que dizem as pessoas que já fizeram</h2>
+        <h2 className="section-title animate-on-scroll hidden-content">O que dizem as pessoas que já fizeram</h2>
         
-        <div className="text-center mb-8 animate-on-scroll">
+        <div className="text-center mb-8 animate-on-scroll hidden-content">
           <p className="text-lg md:text-xl font-medium text-jade-600">
             Mais de 2.400 mulheres já fizeram o Protocolo 4F – e transformaram a forma como se sentem no próprio corpo
           </p>
         </div>
         
-        <div className="relative animate-on-scroll">
+        <div className="relative animate-on-scroll hidden-content">
           <div 
             className="testimonial-carousel overflow-hidden" 
             onTouchStart={handleTouchStart}
@@ -97,7 +97,7 @@ const Testimonials: React.FC = () => {
           </button>
         </div>
         
-        <div className="flex justify-center mt-6">
+        <div className="flex justify-center mt-6 hidden-content">
           {testimonialImages.map((_, index) => (
             <button
               key={index}

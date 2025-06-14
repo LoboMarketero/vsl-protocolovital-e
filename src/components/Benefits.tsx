@@ -10,7 +10,7 @@ interface BenefitProps {
 const Benefit: React.FC<BenefitProps> = ({ icon, text, delay }) => {
   return (
     <div 
-      className="flex items-start gap-2 p-2 rounded-lg transition-all duration-300 hover:bg-white/50 animate-on-scroll"
+      className="flex items-start gap-2 p-2 rounded-lg transition-all duration-300 hover:bg-white/50 animate-on-scroll hidden-content"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="bg-jade-100 p-2 rounded-full text-jade-600 hover-bounce">
@@ -60,7 +60,7 @@ const Benefits: React.FC = () => {
   return (
     <section className="section-spacing" id="benefits">
       <div className="container-custom">
-        <h2 className="section-title animate-on-scroll mb-2">Resultados que você vai sentir nos primeiros dias:</h2>
+        <h2 className="section-title animate-on-scroll hidden-content mb-2">Resultados que você vai sentir nos primeiros dias:</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {benefits.map((benefit, index) => (

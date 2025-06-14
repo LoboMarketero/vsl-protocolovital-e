@@ -13,17 +13,18 @@ function App() {
   const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
+    // Delay of 4:30 minutes (270 seconds = 270000 milliseconds)
     const timer = setTimeout(() => {
       setShowContent(true);
       document.querySelectorAll('.hidden-content').forEach(el => {
         el.classList.add('show');
       });
-    }, 0);
+    }, 270000); // 4:30 minutes
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && showContent) {
             entry.target.classList.add('show');
           }
         });
@@ -38,7 +39,7 @@ function App() {
       clearTimeout(timer);
       animateElements.forEach(el => observer.unobserve(el));
     };
-  }, []);
+  }, [showContent]);
 
   return (
     <div className="relative">
@@ -65,7 +66,7 @@ function App() {
       </div>
       <div 
         className={`transition-all duration-1000 ease-in-out overflow-hidden ${
-          showContent ? 'opacity-100 max-h-[5000px]' : 'opacity-0 max-h-0'
+          showContent ? 'opacity-100 max-h-[10000px]' : 'opacity-0 max-h-0'
         }`}
       >
         <div className="container-custom">
